@@ -34,14 +34,6 @@ export async function handledSendMail(req, res) {
         <title>Document</title>
       </head>
       <body>
-        <img
-          src="http://localhost:8080/api/track/open/id"
-          alt="Logo"
-          title="Logo"
-          style="display: block"
-          width="1"
-          height="1"
-        />
 
         <div>${mailBody}</div>
 
@@ -83,3 +75,40 @@ export async function handledSendMail(req, res) {
     res.status(500).json('mail not sent')
   }
 }
+
+/*
+       <img
+          src="${process.env.BASE_URL}/api/track/open/${templateId}"
+          alt="Logo"
+          title="Logo"
+          style="display: block"
+          width="10"
+          height="10"
+        />
+        <img
+          src="https://res.cloudinary.com/dqykfmixh/image/upload/v1720241220/mailmomentum/wzdylg5aqqp4rafvk8if.png"
+          alt="Logo"
+          title="Logo"
+          style="display: block"
+          width="20"
+          height="20"
+        />
+        <img
+          src="http://www.google-analytics.com/collect?v=1
+                &tid=UA-12345678-1
+                &cid=12345
+                &t=event
+                &ec=email
+                &ea=open
+                &el=recipient_id
+                &cs=newsletter
+                &cm=email
+                &cn=Campaign_Name"
+          alt="Logo"
+          title="Logo"
+          style="display: block"
+          width="30"
+          height="30"
+        />
+
+ */

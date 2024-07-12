@@ -19,6 +19,18 @@ const templateSchema = mongoose.Schema(
         count: { type: Number, required: true, default: 0 },
       },
     ],
+    openPerHour: [
+      {
+        time: { type: String, required: true },
+        count: { type: Number, required: true, default: 0 },
+      },
+    ],
+    openPerDay: [
+      {
+        day: { type: String, required: true },
+        count: { type: Number, required: true, default: 0 },
+      },
+    ],
   },
   {
     timestamps: true,

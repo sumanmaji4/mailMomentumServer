@@ -29,9 +29,10 @@ export async function handleMailOpen(req, res) {
   // track mail here
   const id = req.params.id
 
-  console.log('mail opened')
+  console.log('mail opened', id)
   res.set('Content-Type', 'image/png')
-  return res.status(200).download(path.join(folder, 'public', 'img2.png'))
+  return res.status(200).sendFile(path.join(__dirname, '../../public/logo.png')) //('public/logo.png')
+  //'https://res.cloudinary.com/dqykfmixh/image/upload/v1720241220/mailmomentum/wzdylg5aqqp4rafvk8if.png'
   // return res.json('img path')
 }
 
@@ -70,6 +71,7 @@ export async function handleMailClick(req, res) {
     currentTemplate.performancePerHour = currperformancePerHour
     currentTemplate.performancePerDay = currperformancePerDay
 
+    // console.log(hour)
     // console.log(
     //   '#####################' + JSON.stringify(currperformancePerHour)
     // )
@@ -78,6 +80,6 @@ export async function handleMailClick(req, res) {
 
     res.status(200).redirect(`${redirect}`)
   } catch {
-    res.status(500).redirect('https://www.geeksforgeeks.org')
+    res.status(500).redirect('https://www.google.com')
   }
 }

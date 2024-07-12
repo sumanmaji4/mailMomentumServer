@@ -24,6 +24,6 @@ app.use(express.static('./public'))
 app.use('/api', router)
 
 dbConnect()
-app.listen(8080, () => {
-  console.log('Server is up n running..')
+app.listen(process.env.PORT, () => {
+  console.log('Server is up n running on ' + process.env.PORT)
 })
